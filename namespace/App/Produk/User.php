@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Produk;
+
+class User
+{
+    # code...
+
+    public function __construct()
+    {
+        echo "ini adalah kelas " . __CLASS__;
+    }
+}

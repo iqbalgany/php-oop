@@ -17,7 +17,7 @@ abstract class Produk
         $this->harga = $harga;
     }
 
-    public function getLable()
+    public function getLabel()
     {
         return "$this->penulis, $this->judul";
     }
@@ -76,7 +76,7 @@ abstract class Produk
 
     public function getInfo()
     {
-        $str = "{$this->judul} | {$this->getLable()} (Rp. {$this->harga})";
+        $str = "{$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
         return $str;
     }
 }

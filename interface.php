@@ -1,5 +1,4 @@
 <?php
-
 interface InfoProduk
 {
     public function getInfoProduk();
@@ -22,7 +21,7 @@ abstract class Produk
         $this->harga = $harga;
     }
 
-    public function getLable()
+    public function getLabel()
     {
         return "$this->penulis, $this->judul";
     }
@@ -94,7 +93,7 @@ class Komik extends Produk implements InfoProduk
     #[Override]
     function getInfo()
     {
-        $str = "{$this->judul} | {$this->getLable()} (Rp. {$this->harga})";
+        $str = "{$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
         return $str;
     }
 
@@ -119,7 +118,7 @@ class Game extends Produk implements InfoProduk
 
     function getInfo()
     {
-        $str = "{$this->judul} | {$this->getLable()} (Rp. {$this->harga})";
+        $str = "{$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
         return $str;
     }
 
@@ -150,9 +149,6 @@ class CetakInfoProduk
         return $str;
     }
 }
-
-// $produk = new Produk();
-
 
 $produk1 = new Komik("Naruto", "Masahi Kishimoto", "Shonen Jump", 900000,  900);
 $produk2 = new Game("Spiderman", "Sam Raymi", "Sony Picture", 100, 2);

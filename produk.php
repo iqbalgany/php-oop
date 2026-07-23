@@ -1,16 +1,19 @@
-<?php 
+<?php
 
-class Produk {
-    public $judul = 'Naruto', 
-           $penulis = 'Narji',
-           $harga;
+class Produk
+{
+    public $judul = 'Naruto',
+        $penulis = 'Narji',
+        $harga;
 
 
-    public function sayHello() {
+    public function sayHello()
+    {
         return "Hello World";
     }
 
-    public function getLable() {
+    public function getLabel()
+    {
         return "$this->penulis, $this->judul";
     }
 }
@@ -25,10 +28,6 @@ class Produk {
 // $produk4->penulis = 'Sam raymi';
 // $produk4->harga = 7000000;
 
-// echo "Komik: " . $produk3->getLable();
+// echo "Komik: " . $produk3->getLabel();
 // echo "<br>";
-// echo "Movie: " . $produk4->getLable();
-
-
-
-?>
+// echo "Movie: " . $produk4->getLabel();
